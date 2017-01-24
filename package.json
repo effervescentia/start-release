@@ -1,0 +1,58 @@
+{
+  "name": "start-release",
+  "version": "1.0.0",
+  "description": "Semantic Release task for Start",
+  "keywords": [
+    "start",
+    "start-task"
+  ],
+  "main": "build/index.js",
+  "homepage": "https://github.com/effervescentia/start-release",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/effervescentia/start-release.git"
+  },
+  "author": {
+    "name": "Ben Teichman",
+    "email": "ben.l.teichman@gmail.com",
+    "url": "https://github.com/effervescentia"
+  },
+  "bugs": {
+    "url": "https://github.com/effervescentia/start-release/issues"
+  },
+  "files": [
+    "build/"
+  ],
+  "scripts": {
+    "start": "start-runner -f ./tasks.js",
+    "prepush": "yarn start prepush",
+    "prepublish": "yarn start build",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-start": "^0.1.0",
+    "condition-circle": "^1.5.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "husky": "^0.13.0",
+    "semistandard": "^9.2.1",
+    "start-babel-cli": "^4.0.1",
+    "start-standard-preset": "^1.1.0",
+    "tape": "^4.6.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "npm-run": "^4.1.0",
+    "semantic-release": "^6.3.2"
+  }
+}
