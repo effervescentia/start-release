@@ -1,6 +1,6 @@
 {
   "name": "start-release",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Semantic Release task for Start",
   "keywords": [
     "start",
@@ -10,7 +10,7 @@
   "homepage": "https://github.com/effervescentia/start-release",
   "repository": {
     "type": "git",
-    "url": "git://github.com/effervescentia/start-release.git"
+    "url": "https://github.com/effervescentia/start-release.git"
   },
   "author": {
     "name": "Ben Teichman",
