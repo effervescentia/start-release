@@ -40,6 +40,7 @@
     "babel-preset-start": "^0.1.0",
     "cz-conventional-changelog": "^1.2.0",
     "husky": "^0.13.0",
+    "semantic-release": "^6.3.2",
     "semistandard": "^9.2.1",
     "start-babel-cli": "^4.0.1",
     "start-standard-preset": "^1.1.0",
