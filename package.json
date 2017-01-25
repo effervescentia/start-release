@@ -51,12 +51,14 @@
     }
   },
   "dependencies": {
+    "npm-run": "^4.1.0"
+  },
+  "peerDependencies": {
     "@semantic-release/condition-travis": "^4.1.4",
     "@taw/condition-vsts": "^1.0.5",
     "condition-appveyor": "^0.0.4",
     "condition-circle": "^1.5.0",
     "condition-snap": "^0.0.2",
-    "npm-run": "^4.1.0",
     "sr-condition-wercker": "^1.0.2"
   }
 }
