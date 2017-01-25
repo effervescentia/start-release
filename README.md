@@ -51,11 +51,12 @@ export const task = () => start(
 This task relies on array of files and provides the same, see [documentation](https://github.com/start-runner/start#readme) for details.
 
 ## Condition
-By default this package uses `@semantic-release/condition-travis`, but is packaged with
-`@taw/condition-vsts`, `condition-circle`, `condition-appveyor`, `condition-snap` and `sr-condition-wercker`.
+By default this package uses `condition-travis`, but is packaged with
+`condition-circle`, `condition-snap` and `sr-condition-wercker`.
 
 ## Arguments
 
 `startRelease(condition)`
 
-* `condition` – The name of the condition package to use for verification.
+* `condition` – The name of the ci to check for verification against.
+Options are: `travis`, `circle`, `snap` and `wercker`

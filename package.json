@@ -57,8 +57,6 @@
   },
   "peerDependencies": {
     "@semantic-release/condition-travis": "^4.1.4",
-    "@taw/condition-vsts": "^1.0.5",
-    "condition-appveyor": "^0.0.4",
     "condition-snap": "^0.0.2",
     "sr-condition-wercker": "^1.0.2"
   }
