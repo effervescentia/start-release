@@ -15,9 +15,21 @@ release task checker for [Start](https://github.com/start-runner/start)
 ## Install
 
 ```sh
+# install semantic-release-cli globally in order
+# to setup your repo
+npm install -g semantic-release-cli
+# or
+yarn global add semantic-release-cli
+
 npm install --save-dev start-release
 # or
 yarn add --dev start-release
+```
+
+## Setup semantic-release
+
+```sh
+semantic-release-cli setup
 ```
 
 ## Usage
