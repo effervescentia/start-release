@@ -32,6 +32,30 @@ yarn add --dev start-release
 semantic-release-cli setup
 ```
 
+## Setup conditions
+If not running on Travis CI, you will have to specify a package for verification.
+
+```sh
+npm install --save-dev condition-circle
+# or
+yarn add --dev condition-circle
+```
+
+In your `package.json`
+
+```json
+"release": {
+   "verifyConditions": "condition-circle"
+}
+```
+
+Condition libraries:
+[condition-circle](https://github.com/bahmutov/condition-circle),
+[condition-snap](https://github.com/ocombe/condition-snap),
+[@taw/condition-vsts](https://github.com/agilityworks-uk/condition-vsts),
+[condition-appveyor](https://github.com/cwharris/condition-appveyor),
+[sr-condition-wercker](https://github.com/io-monad/sr-condition-wercker)
+
 ## Usage
 
 ```js
@@ -49,14 +73,3 @@ export const task = () => start(
 ```
 
 This task relies on array of files and provides the same, see [documentation](https://github.com/start-runner/start#readme) for details.
-
-## Condition
-By default this package uses `condition-travis`, but is packaged with
-`condition-circle`, `condition-snap` and `sr-condition-wercker`.
-
-## Arguments
-
-`startRelease(condition)`
-
-* `condition` – The name of the ci to check for verification against.
-Options are: `travis`, `circle`, `snap` and `wercker`

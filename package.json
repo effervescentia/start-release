@@ -54,10 +54,5 @@
   },
   "dependencies": {
     "npm-run": "^4.1.0"
-  },
-  "peerDependencies": {
-    "@semantic-release/condition-travis": "^4.1.4",
-    "condition-snap": "^0.0.2",
-    "sr-condition-wercker": "^1.0.2"
   }
 }
