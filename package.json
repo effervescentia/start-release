@@ -38,7 +38,6 @@
   "license": "MIT",
   "devDependencies": {
     "babel-preset-start": "^0.1.0",
-    "condition-circle": "^1.5.0",
     "cz-conventional-changelog": "^1.2.0",
     "husky": "^0.13.0",
     "semistandard": "^9.2.1",
@@ -52,7 +51,12 @@
     }
   },
   "dependencies": {
+    "@semantic-release/condition-travis": "^4.1.4",
+    "@taw/condition-vsts": "^1.0.5",
+    "condition-appveyor": "^0.0.4",
+    "condition-circle": "^1.5.0",
+    "condition-snap": "^0.0.2",
     "npm-run": "^4.1.0",
-    "semantic-release": "^6.3.2"
+    "sr-condition-wercker": "^1.0.2"
   }
 }

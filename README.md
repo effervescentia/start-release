@@ -38,20 +38,24 @@ semantic-release-cli setup
 import Start from 'start';
 import reporter from 'start-pretty-reporter';
 import files from 'start-files';
-import startRelease from 'start-release';
+import release from 'start-release';
 
 const start = Start(reporter());
 
 export const task = () => start(
   files([ 'lib/**/*.js', 'test/**/*.js' ]),
-  startRelease()
+  release()
 );
 ```
 
 This task relies on array of files and provides the same, see [documentation](https://github.com/start-runner/start#readme) for details.
 
+## Condition
+By default this package uses `@semantic-release/condition-travis`, but is packaged with
+`@taw/condition-vsts`, `condition-circle`, `condition-appveyor`, `condition-snap` and `sr-condition-wercker`.
+
 ## Arguments
 
-`startRelease(<ARG1>, <ARG2>)`
+`startRelease(condition)`
 
-* `<ARGUMENT NAME>` – `<ARGUMENT DESCRIPTION>`
+* `condition` – The name of the condition package to use for verification.
