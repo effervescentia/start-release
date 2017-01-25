@@ -2,7 +2,7 @@
 
 
 [![npm](https://img.shields.io/npm/v/start-release.svg?style=flat-square)](https://www.npmjs.com/package/start-release)
-[![linux build](https://img.shields.io/travis/effervescentia/start-release/master.svg?label=linux&style=flat-square)](https://travis-ci.org/effervescentia/start-release)
+[![linux build](https://img.shields.io/circleci/project/github/effervescentia/start-release/master.svg?label=linux&style=flat-square)](https://circleci.com/gh/effervescentia/start-release)
 [![windows build](https://img.shields.io/appveyor/ci/effervescentia/start-release/master.svg?label=windows&style=flat-square)](https://ci.appveyor.com/project/effervescentia/start-release)
 [![coverage](https://img.shields.io/codecov/c/github/effervescentia/start-release/master.svg?style=flat-square)](https://codecov.io/github/effervescentia/start-release)
 [![deps](https://david-dm.org/effervescentia/start-release.svg?style=flat-square)](https://david-dm.org/effervescentia/start-release)
