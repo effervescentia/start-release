@@ -2,6 +2,9 @@ import fs from 'fs';
 import url from 'url';
 import npmconf from 'npmconf';
 import normalizePkg from 'normalize-package-data';
+import getRegistry from 'semantic-release/src/lib/get-registry';
+import getPlugins from 'semantic-release/src/lib/plugins';
+import verifyConfig from 'semantic-release/src/lib/verify';
 
 const env = process.env;
 
@@ -31,14 +34,14 @@ export const getOptions = (pkg, opts) => ({
 export const getNpm = (pkg, conf) => ({
   auth: { token: env.NPM_TOKEN },
   cafile: conf.get('cafile'),
-  registry: require('semantic-release/src/lib/get-registry')(pkg, conf),
+  registry: getRegistry(pkg, conf),
   tag: (pkg.publishConfig || {}).tag || conf.get('tag') || 'latest'
 });
 
 export const generate = (conf, opts, log) => {
   const pkg = getPkg();
   const options = getOptions(pkg, opts);
-  const plugins = require('semantic-release/src/lib/plugins')(options);
+  const plugins = getPlugins(options);
   const npm = getNpm(pkg, conf);
 
   // eslint-disable-next-line immutable/no-mutation
@@ -54,7 +57,7 @@ export const generate = (conf, opts, log) => {
 };
 
 export const verify = (config, log) => {
-  const errors = require('semantic-release/src/lib/verify')(config);
+  const errors = verifyConfig(config);
 
   // eslint-disable-next-line no-magic-numbers
   if (errors.length) {
