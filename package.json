@@ -49,11 +49,11 @@
     }
   },
   "dependencies": {
+    "execa": "^0.6.0",
     "nerf-dart": "^1.0.0",
     "normalize-package-data": "^2.3.5",
     "npmconf": "^2.1.2",
-    "semantic-release": "^6.3.2",
-    "spork": "^0.3.2"
+    "semantic-release": "^6.3.2"
   },
   "peerDependencies": {
     "semantic-release": "^6.3.2"
