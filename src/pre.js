@@ -8,7 +8,7 @@ export default (opts, log) => {
   log('running pre release');
   const originalPkg = JSON.parse(fs.readFileSync('./package.json'));
 
-  configure(opts, log)
+  return configure(opts, log)
     .then((config) => new Promise((resolve, reject) =>
       // eslint-disable-next-line no-confusing-arrow, no-ternary
       config.plugins.verifyConditions(config, (err) => err ? reject(err) : resolve(config))))

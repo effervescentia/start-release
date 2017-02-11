@@ -4,7 +4,7 @@ import configure from './config';
 export default (opts, log) => {
   log('running post release');
 
-  configure(opts, log)
+  return configure(opts, log)
     .then((config) => new Promise((resolve, reject) =>
       postRelease(config, (err) => {
         if (err) {
