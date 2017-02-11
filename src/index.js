@@ -6,10 +6,10 @@ const publish = (log) => {
   log('publishing to npm');
 
   return new Promise((resolve, reject) => {
-    const proc = spawn('npm', ['publish'], { stdio: 'inherit' });
+    const proc = spawn('npm', ['publish']);
 
-    proc.stdout.on('data', (data) => log(data));
-    proc.stderr.on('data', (data) => log(data));
+    proc.stdout.on('data', (data) => log(`${data}`));
+    proc.stderr.on('data', (data) => log(`${data}`));
 
     proc.on('close', () => {
       log('published!');

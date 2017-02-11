@@ -76,6 +76,8 @@ export default (opts, log) => {
           ...{ version }
         }, null, 2));
         log(`updated package.json version to ${version}`);
+
+        resolve();
       });
     }));
 };
