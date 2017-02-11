@@ -54,5 +54,8 @@
     "npmconf": "^2.1.2",
     "semantic-release": "^6.3.2",
     "spork": "^0.3.2"
+  },
+  "peerDependencies": {
+    "semantic-release": "^6.3.2"
   }
 }
