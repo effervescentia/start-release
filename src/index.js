@@ -1,18 +1,21 @@
-import execa from 'execa';
+import { spawn } from 'child_process';
 import preRelease from './pre';
 import postRelease from './post';
 
 const publish = (log) => {
   log('publishing to npm');
 
-  return execa.shell('npm', ['publish'])
-    .then((res) => {
-      if (res.stderr) {
-        throw new Error(res.stderr);
-      }
+  return new Promise((resolve, reject) => {
+    const proc = spawn('npm', ['publish'], { stdio: 'inherit' });
 
-      return log(res.stdout);
-    });
+    proc.stdout.on('data', (data) => log(data));
+    proc.stderr.on('data', (data) => log(data));
+
+    proc.on('close', () => {
+      log('published!');
+      resolve();
+    }).on('error', (err) => reject(err));
+  });
 };
 
 export default (opts) => () => {

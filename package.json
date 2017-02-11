@@ -49,7 +49,6 @@
     }
   },
   "dependencies": {
-    "execa": "^0.6.0",
     "nerf-dart": "^1.0.0",
     "normalize-package-data": "^2.3.5",
     "npmconf": "^2.1.2",
