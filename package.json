@@ -24,7 +24,7 @@
     "dist/"
   ],
   "scripts": {
-    "start": "start-runner -p re-start/presets/es6",
+    "start": "start-runner -p re-start",
     "prepush": "yarn start prepush",
     "prepublish": "yarn start build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"

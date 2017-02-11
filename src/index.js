@@ -1,9 +1,8 @@
-import spork from 'spork';
 import preRelease from './pre';
 import postRelease from './post';
 
 const publish = () => new Promise((resolve, reject) => {
-  spork('npm', ['publish'], { exit: false, quiet: true })
+  require('spork')('npm', ['publish'], { exit: false, quiet: true })
     // eslint-disable-next-line no-confusing-arrow, no-ternary, no-magic-numbers
     .on('exit:code', (code) => code === 0 ?
       resolve() :

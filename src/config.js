@@ -29,7 +29,7 @@ export const getOptions = (pkg, opts) => ({
 });
 
 export const getNpm = (pkg, conf) => ({
-  auth: { token: process.env.NPM_TOKEN },
+  auth: { token: env.NPM_TOKEN },
   cafile: conf.get('cafile'),
   registry: require('semantic-release/src/lib/get-registry')(pkg, conf),
   tag: (pkg.publishConfig || {}).tag || conf.get('tag') || 'latest'
