@@ -9,9 +9,11 @@ export default (opts, log) => {
   const originalPkg = JSON.parse(fs.readFileSync('./package.json'));
 
   return configure(opts, log)
-    .then((config) => new Promise((resolve, reject) =>
+    .then((config) => new Promise((resolve, reject) => {
+      log('checking conditions');
       // eslint-disable-next-line no-confusing-arrow, no-ternary
-      config.plugins.verifyConditions(config, (err) => err ? reject(err) : resolve(config))))
+      config.plugins.verifyConditions(config, (err) => err ? reject(err) : resolve(config));
+    }))
     .then((config) => {
       // eslint-disable-next-line object-curly-newline
       const { conf, env, npm } = config;

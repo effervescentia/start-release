@@ -48,10 +48,12 @@ export const generate = (conf, opts, log) => {
   npm.registry = url.format(url.parse(npm.registry));
 
   // eslint-disable-next-line object-curly-newline
-  const config = { env, pkg, options, plugins, npm };
+  const config = { conf, env, pkg, options, plugins, npm };
 
-  log(`options: ${{ ...options, ...{ githubToken: '***' } }}`);
-  log('verifying...');
+  if (options.debug) {
+    // eslint-disable-next-line no-magic-numbers
+    log(`options: ${JSON.stringify({ ...options, ...{ githubToken: '***' } }, null, 2)}`);
+  }
 
   return config;
 };
