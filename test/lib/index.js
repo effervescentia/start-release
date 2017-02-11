@@ -1,25 +1,17 @@
-import test from 'tape';
+import { expect } from 'chai';
 
 import task from '../../lib';
 
-test('basic', (t) => {
-  t.equal(
-    typeof task,
-    'function',
-    '1st function'
-  );
+describe('basic', () => {
+  it('should return function', () => {
+    expect(task).to.be.a('function');
+  });
 
-  t.equal(
-    typeof task(),
-    'function',
-    '2nd function'
-  );
+  it('should return function -> function', () => {
+    expect(task()).to.be.a('function');
+  });
 
-  t.equal(
-    typeof task()(),
-    'function',
-    '3rd function'
-  );
-
-  t.end();
+  it('should return function -> function -> function', () => {
+    expect(task()()).to.be.a('function');
+  });
 });

@@ -24,7 +24,7 @@
     "build/"
   ],
   "scripts": {
-    "start": "start-runner -f ./tasks.js",
+    "start": "start-runner -p re-start",
     "prepush": "yarn start prepush",
     "prepublish": "yarn start build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -37,15 +37,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-start": "^0.1.0",
-    "condition-circle": "^1.5.0",
-    "cz-conventional-changelog": "^1.2.0",
-    "husky": "^0.13.0",
-    "semantic-release": "^6.3.2",
-    "semistandard": "^9.2.1",
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "eslint-config-tough": "^0.4.0",
     "start-babel-cli": "^4.0.1",
-    "start-standard-preset": "^1.1.0",
-    "tape": "^4.6.3"
+    "tkstr-devtools": "^1.0.0"
   },
   "config": {
     "commitizen": {
@@ -53,6 +49,10 @@
     }
   },
   "dependencies": {
-    "npm-run": "^4.1.0"
+    "nerf-dart": "^1.0.0",
+    "normalize-package-data": "^2.3.5",
+    "npmconf": "^2.1.2",
+    "semantic-release": "^6.3.2",
+    "spork": "^0.3.2"
   }
 }
