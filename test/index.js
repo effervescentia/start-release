@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import task from '../../lib';
+import task from '../src';
 
 describe('basic', () => {
   it('should return function', () => {

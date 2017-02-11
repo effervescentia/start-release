@@ -1,4 +1,5 @@
 import fs from 'fs';
+import preRelease from 'semantic-release/src/pre';
 import nerfDart from 'nerf-dart';
 import configure from './config';
 
@@ -42,7 +43,7 @@ export default (opts, log) => {
       });
     })
     .then((config) => new Promise((resolve, reject) => {
-      require('semantic-release/src/pre')(config, (err, { version }) => {
+      preRelease(config, (err, { version }) => {
         const { npm, options } = config;
 
         if (err) {
