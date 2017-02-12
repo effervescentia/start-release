@@ -26,8 +26,7 @@
   "scripts": {
     "start": "start-runner -p re-start",
     "prepush": "yarn start prepush",
-    "prepublish": "yarn start build",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "prepublish": "yarn start build"
   },
   "release": {
     "verifyConditions": "condition-circle"
@@ -41,7 +40,7 @@
     "eslint": "^3.15.0",
     "eslint-config-tough": "^0.4.0",
     "start-babel-cli": "^4.0.1",
-    "tkstr-devtools": "^1.1.0"
+    "tkstr-devtools": "^1.2.1"
   },
   "config": {
     "commitizen": {

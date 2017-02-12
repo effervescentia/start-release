@@ -2483,9 +2483,9 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~1.0.4"
 
-re-start@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/re-start/-/re-start-1.5.0.tgz#e02af7bcd55028fee8f845c52baeccd773c32992"
+re-start@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/re-start/-/re-start-1.7.2.tgz#1c49eb04f5f9aa2d5f76117b1f5e14d943635d9e"
   dependencies:
     start "^5.0.0"
     start-babel "^3.0.0"
@@ -2498,6 +2498,7 @@ re-start@^1.5.0:
     start-mocha "^3.0.0"
     start-pretty-reporter "^0.3.0"
     start-read "^0.3.0"
+    start-release "^1.3.6"
     start-split "^1.0.1"
     start-typescript "^1.1.3"
     start-watch "^2.0.0"
@@ -3004,6 +3005,15 @@ start-read@^0.3.0:
     graceful-fs "^4.1.5"
     makethen "^0.1.0"
 
+start-release@^1.3.6:
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/start-release/-/start-release-1.3.6.tgz#a83375e329da121426617d0234cb91ca0581511a"
+  dependencies:
+    nerf-dart "^1.0.0"
+    normalize-package-data "^2.3.5"
+    npmconf "^2.1.2"
+    semantic-release "^6.3.2"
+
 start-simple-cli@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/start-simple-cli/-/start-simple-cli-4.1.1.tgz#ef68ffe915ca2fc5ca44959103f5085443be58e6"
@@ -3167,16 +3177,15 @@ through@2, through@^2.3.6, through@~2.3, through@~2.3.1:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
-tkstr-devtools@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/tkstr-devtools/-/tkstr-devtools-1.1.0.tgz#25c75271b3ca1c7b17b7f801247571ab0057457e"
+tkstr-devtools@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/tkstr-devtools/-/tkstr-devtools-1.2.1.tgz#2b631ce5398ced8f323bb38d8480217dbb18616b"
   dependencies:
     babel-preset-start "^0.1.0"
     condition-circle "^1.5.0"
     cz-conventional-changelog "^1.2.0"
     husky "^0.13.1"
-    re-start "^1.5.0"
-    semantic-release "^6.3.2"
+    re-start "^1.7.2"
     start-babel-cli "^4.0.1"
 
 to-fast-properties@^1.0.1:
