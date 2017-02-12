@@ -6,11 +6,15 @@
 [![windows build](https://img.shields.io/appveyor/ci/effervescentia/start-release/master.svg?label=windows&style=flat-square)](https://ci.appveyor.com/project/effervescentia/start-release)
 [![coverage](https://img.shields.io/codecov/c/github/effervescentia/start-release/master.svg?style=flat-square)](https://codecov.io/github/effervescentia/start-release)
 [![deps](https://david-dm.org/effervescentia/start-release.svg?style=flat-square)](https://david-dm.org/effervescentia/start-release)
+
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![greenkeeper](https://badges.greenkeeper.io/effervescentia/start-release.svg)](https://greenkeeper.io/)
 
-release task checker for [Start](https://github.com/start-runner/start)
+🚀 [Semantic Release][semantic-release] task for [Start][start]
+
+[semantic-release]: https://github.com/semantic-release/semantic-release
+[start]: https://github.com/start-runner/start
 
 ## Install
 
@@ -50,11 +54,12 @@ In your `package.json`
 ```
 
 Condition libraries:
-[condition-circle](https://github.com/bahmutov/condition-circle),
-[condition-snap](https://github.com/ocombe/condition-snap),
-[@taw/condition-vsts](https://github.com/agilityworks-uk/condition-vsts),
-[condition-appveyor](https://github.com/cwharris/condition-appveyor),
-[sr-condition-wercker](https://github.com/io-monad/sr-condition-wercker)
+
+-   [condition-circle](https://github.com/bahmutov/condition-circle)
+-   [condition-snap](https://github.com/ocombe/condition-snap)
+-   [@taw/condition-vsts](https://github.com/agilityworks-uk/condition-vsts)
+-   [condition-appveyor](https://github.com/cwharris/condition-appveyor)
+-   [sr-condition-wercker](https://github.com/io-monad/sr-condition-wercker)
 
 ## Usage
 
@@ -72,4 +77,9 @@ export const task = () => start(
 );
 ```
 
-This task relies on array of files and provides the same, see [documentation](https://github.com/start-runner/start#readme) for details.
+## Arguments
+
+`release(opts)`
+
+*   `opts` - the same options that semantic release accepts as seen
+    [here](https://github.com/semantic-release/semantic-release#options)
