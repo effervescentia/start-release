@@ -5,3 +5,4 @@ extends:
   - tough/config/esnext
 rules:
   array-bracket-spacing: 0
+  no-ternary: 0

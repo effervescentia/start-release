@@ -81,5 +81,6 @@ export const task = () => start(
 
 `release(opts)`
 
-*   `opts` - the same options that semantic release accepts as seen
+*   `opts.options` - the same options that semantic release accepts as seen
     [here](https://github.com/semantic-release/semantic-release#options)
+*   `opts.public` - publish your scoped package publically (*default*: `false`)

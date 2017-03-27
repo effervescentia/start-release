@@ -2,11 +2,12 @@ import { spawn } from 'child_process';
 import preRelease from './pre';
 import postRelease from './post';
 
-const publish = (log) => {
+const publish = (log, isPublic) => {
   log('publishing to npm');
 
   return new Promise((resolve, reject) => {
-    const proc = spawn('npm', ['publish']);
+    const proc = spawn('npm', ['publish']
+      .concat(isPublic ? ['--access', 'public'] : []));
 
     proc.stdout.on('data', (data) => log(`${data}`));
     proc.stderr.on('data', (data) => log(`${data}`));
@@ -20,8 +21,8 @@ const publish = (log) => {
 
 export default (opts) => () => {
   return function release(log) {
-    return preRelease(opts, log)
-      .then(() => publish(log))
-      .then(() => postRelease(opts, log));
+    return preRelease(opts.options, log)
+      .then(() => publish(log, opts.public))
+      .then(() => postRelease(opts.options, log));
   };
 };
