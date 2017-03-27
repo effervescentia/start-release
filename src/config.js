@@ -1,10 +1,10 @@
-import fs from 'fs';
-import url from 'url';
-import npmconf from 'npmconf';
-import normalizePkg from 'normalize-package-data';
-import getRegistry from 'semantic-release/src/lib/get-registry';
-import getPlugins from 'semantic-release/src/lib/plugins';
-import verifyConfig from 'semantic-release/src/lib/verify';
+import * as fs from 'fs';
+import * as url from 'url';
+import * as npmconf from 'npmconf';
+import * as normalizePkg from 'normalize-package-data';
+import * as getRegistry from 'semantic-release/src/lib/get-registry';
+import * as getPlugins from 'semantic-release/src/lib/plugins';
+import * as verifyConfig from 'semantic-release/src/lib/verify';
 
 const env = process.env;
 

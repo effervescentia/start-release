@@ -1,4 +1,4 @@
-import postRelease from 'semantic-release/src/post';
+import * as postRelease from 'semantic-release/src/post';
 import configure from './config';
 
 export default (opts, log) => {
