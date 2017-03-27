@@ -1,6 +1,6 @@
-import * as fs from 'fs';
-import * as preRelease from 'semantic-release/src/pre';
-import * as nerfDart from 'nerf-dart';
+import fs from 'fs';
+import preRelease from 'semantic-release/src/pre';
+import nerfDart from 'nerf-dart';
 import configure from './config';
 
 /* eslint-disable no-sync, no-magic-numbers */
