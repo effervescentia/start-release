@@ -19,7 +19,7 @@ const publish = (log, isPublic) => {
   });
 };
 
-export default (opts) => () => {
+export default (opts = {}) => () => {
   return function release(log) {
     return preRelease(opts.options, log)
       .then(() => publish(log, opts.public))
