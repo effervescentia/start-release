@@ -36,10 +36,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-latest": "^6.24.0",
-    "babel-preset-stage-2": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "chai": "^3.5.0",
-    "eslint": "^3.18.0",
+    "eslint": "^3.19.0",
     "eslint-config-tough": "^0.4.0",
     "start-babel-cli": "^4.0.1",
     "tkstr-devtools": "^1.2.2"
@@ -51,9 +51,9 @@
   },
   "dependencies": {
     "nerf-dart": "^1.0.0",
-    "normalize-package-data": "^2.3.6",
+    "normalize-package-data": "^2.3.8",
     "npmconf": "^2.1.2",
-    "semantic-release": "^6.3.2"
+    "semantic-release": "^6.3.6"
   },
   "peerDependencies": {
     "semantic-release": "^6.3.2"
