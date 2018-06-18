@@ -26,7 +26,8 @@
   "scripts": {
     "start": "start-runner -p re-start/presets/es6",
     "prepush": "yarn start prepush",
-    "prepublish": "yarn start build"
+    "prepublish": "npm run snyk-protect; yarn start build",
+    "snyk-protect": "snyk protect"
   },
   "release": {
     "verifyConditions": "condition-circle"
@@ -53,9 +54,11 @@
     "nerf-dart": "^1.0.0",
     "normalize-package-data": "^2.3.8",
     "npmconf": "^2.1.2",
-    "semantic-release": "^6.3.6"
+    "semantic-release": "^8.0.1",
+    "snyk": "^1.83.0"
   },
   "peerDependencies": {
     "semantic-release": "^6.3.2"
-  }
+  },
+  "snyk": true
 }
