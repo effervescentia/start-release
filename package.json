@@ -51,9 +51,9 @@
   },
   "dependencies": {
     "nerf-dart": "^1.0.0",
-    "normalize-package-data": "^2.3.8",
+    "normalize-package-data": "^3.0.0",
     "npmconf": "^2.1.2",
-    "semantic-release": "^6.3.6"
+    "semantic-release": "^11.0.0"
   },
   "peerDependencies": {
     "semantic-release": "^6.3.2"
